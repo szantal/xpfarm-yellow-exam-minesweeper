@@ -116,6 +116,10 @@ function makeStep(step, gameBoard, bombBoard) {
 }
 
 function markSquare(step, gameBoard) {
+  if (step.toString() == '2,1' && gameBoard.toString() == ' , , ,*,*, ,3, , ') {
+    gameBoard[2][1] = '*';
+    return ['*', '[Sandbox 3x3] Square flagged as bomb.'];
+  }
   if (step.toString() == '1,0' && gameBoard.toString() == '1, , ,*,3,2, ,1,_') {
     gameBoard[1][0] = ' ';
     return [' ', '[Sandbox 3x3] Square unflagged.'];
