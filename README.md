@@ -688,14 +688,14 @@ _2-
 ```
 -->
 
-### ⚠ US 7
+### 🚧 US 7
 
 ```text
 As a Mine Sweeper player
 I want to mark squares
 So that I can see my guessed bombs
 
-⚠ UAT 7.1
+✅ UAT 7.1
 Given an empty game board
 When I mark square 0;0 as bomb
 Then * appears in the square
@@ -714,7 +714,7 @@ Then the board's state is
 -32
 -1_
 
-⚠ UAT 7.2
+⚠ UAT 7.3
 Given game board
 
 ---

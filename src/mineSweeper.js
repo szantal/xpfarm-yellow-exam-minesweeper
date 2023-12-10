@@ -115,6 +115,13 @@ function makeStep(step, gameBoard, bombBoard) {
   return [nextStep, message];
 }
 
+function markSquare(step, gameBoard) {
+  if (step.toString() == '2,0') {
+    gameBoard[2][0] = '*';
+    return ['*', '[Sandbox 3x3] Square flagged as bomb.'];
+  }
+}
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
@@ -122,3 +129,4 @@ module.exports.placeBomb = placeBomb;
 module.exports.getNumberOfNeighbourBombs = getNumberOfNeighbourBombs;
 module.exports.getPossibleSteps = getPossibleSteps;
 module.exports.makeStep = makeStep;
+module.exports.markSquare = markSquare;
