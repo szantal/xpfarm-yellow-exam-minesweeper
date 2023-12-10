@@ -19,7 +19,7 @@
 - ✅ rename files
 - 🚧 US 1
   - ✅ UAT 1.1
-  - ⚠ UAT 1.2
+  - 🚧 UAT 1.2
 - ⚠ US 2
   - ⚠ UAT 2.1
 - ⚠ US 3
