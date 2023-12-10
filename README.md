@@ -523,7 +523,7 @@ Then the bomb board is
 011
 000
 
-⚠ UAT 4.3
+🚧 UAT 4.3
 Given a board with bombs (b) here
 
 ---

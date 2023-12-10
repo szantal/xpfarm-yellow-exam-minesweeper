@@ -63,4 +63,18 @@ describe('US 4 - Board with the number of neighbour squares with bombs', () => {
       ].toString(),
     );
   });
+  it('should be \n111\n1b1\n111\n when bombs are placed here: \n---\n-b-\n---', () => {
+    let bombBoard = [
+      [0, 0, 0],
+      [0, 'b', 0],
+      [0, 0, 0],
+    ];
+    expect(getNumberOfNeighbourBombs(bombBoard).toString()).toBe(
+      [
+        [1, 1, 1],
+        [1, 'b', 1],
+        [1, 1, 1],
+      ].toString(),
+    );
+  });
 });
