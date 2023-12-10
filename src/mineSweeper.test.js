@@ -7,6 +7,7 @@ const getPossibleSteps = require('./mineSweeper').getPossibleSteps;
 const makeStep = require('./mineSweeper').makeStep;
 const markSquare = require('./mineSweeper').markSquare;
 const checkWin = require('./mineSweeper').checkWin;
+const playGame = require('./mineSweeper').playGame;
 
 describe('US 1 - Game board', () => {
   it('should have 9 squares', () => {
@@ -351,5 +352,11 @@ describe('US 8 - Check win', () => {
       [' ', '1', '_'],
     ];
     expect(checkWin(gameBoard, 3)).toBe(false);
+  });
+});
+describe('US 9 - Play game', () => {
+  it('should return either Game Over or Game Victory', () => {
+    let gameResult = ['Game Over', 'Game Victory'];
+    expect(gameResult).toContain(playGame());
   });
 });
