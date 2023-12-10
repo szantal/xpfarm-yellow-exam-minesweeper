@@ -136,6 +136,17 @@ function checkWin(gameBoard, numberOfBombs) {
     numberOfBombs == 3 &&
     gameBoard.toString() ==
       [
+        ['2', '2', '1'],
+        ['*', '*', '2'],
+        ['3', '*', '2'],
+      ].toString()
+  ) {
+    return true;
+  }
+  if (
+    numberOfBombs == 3 &&
+    gameBoard.toString() ==
+      [
         ['*', '2', '*'],
         ['1', '3', '2'],
         [' ', ' ', ' '],

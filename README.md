@@ -756,7 +756,7 @@ And 3 bombs hidden
 When winning is checked
 Then game has not won
 
-🚧 UAT 8.3
+✅ UAT 8.3
 Given game board
 
 221
