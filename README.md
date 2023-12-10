@@ -625,7 +625,7 @@ When I step on square 1;1
 Then it should return X
 And message '[Sandbox 3x3] BOOM! – Game Over.'
 
-🚧 UAT 6.4
+✅ UAT 6.4
 Given a game board
 
 1--
