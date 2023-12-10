@@ -170,4 +170,26 @@ describe('US 6 - Making step', () => {
       ].toString(),
     );
   });
+  it('on empty board to square 0;0 should return 3 to board and message: [Sandbox 3x3] 3 bombs around your square.', () => {
+    let step = [2, 0];
+    let gameBoard = [
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+    ];
+    let bombBoard = [
+      [2, 2, 1],
+      ['b', 'b', 2],
+      [3, 'b', 2],
+    ];
+    expect(makeStep(step, gameBoard, bombBoard)[0]).toBe('3');
+    expect(makeStep(step, gameBoard, bombBoard)[1]).toBe('[Sandbox 3x3] 3 bombs around your square.');
+    expect(gameBoard.toString()).toBe(
+      [
+        [' ', ' ', ' '],
+        [' ', ' ', ' '],
+        ['3', ' ', ' '],
+      ].toString(),
+    );
+  });
 });

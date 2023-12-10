@@ -603,7 +603,7 @@ When I step on square 2;1
 Then it should return 1
 And message '[Sandbox 3x3] 1 bombs around your square.'
 
-⚠ UAT 6.2
+🚧 UAT 6.2
 Given an empty game board with bomb (b) here
 
 ---
