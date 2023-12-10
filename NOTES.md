@@ -88,6 +88,7 @@
 
 - 🚧 US 8
   - ✅ UAT 8.4
-  - 🚧 UAT 8.5
+  - ✅ UAT 8.5
+  - ⚠ refactor checkWin()
 - ⚠ US 9
   - ⚠ UAT 9.1

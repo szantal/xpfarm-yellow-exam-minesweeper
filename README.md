@@ -778,7 +778,7 @@ And 1 bomb hidden
 When winning is checked
 Then game has won
 
-🚧 UAT 8.5
+✅ UAT 8.5
 Given game board
 
 1--
