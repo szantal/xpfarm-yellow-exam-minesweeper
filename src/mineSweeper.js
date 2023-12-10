@@ -33,6 +33,19 @@ function showGameBoard() {
 
 let numberOfBombs = [1, 3][Math.round(Math.random())];
 
+function placeBomb() {
+  let bombBoard = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+  ];
+  let row = Math.floor(Math.random() * 3);
+  let col = Math.floor(Math.random() * 3);
+  bombBoard[row].splice(col, 1, 'b');
+  return bombBoard;
+}
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
+module.exports.placeBomb = placeBomb;
