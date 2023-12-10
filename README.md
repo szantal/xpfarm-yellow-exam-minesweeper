@@ -574,7 +574,7 @@ Given a game board with steps
 When the possible steps are calculated
 Then it should be 5 squares listed
 
-🚧 UAT 5.3
+✅ UAT 5.3
 Given a game board with steps
 
 22-
