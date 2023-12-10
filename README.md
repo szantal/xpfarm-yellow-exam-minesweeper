@@ -552,7 +552,7 @@ b2b
 01b
 ```
 
-### 🚧 US 5
+### ✅ US 5
 
 ```text
 As a Mine Sweeper player
