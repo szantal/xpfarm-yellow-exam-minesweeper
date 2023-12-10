@@ -6,6 +6,7 @@ const getNumberOfNeighbourBombs = require('./mineSweeper').getNumberOfNeighbourB
 const getPossibleSteps = require('./mineSweeper').getPossibleSteps;
 const makeStep = require('./mineSweeper').makeStep;
 const markSquare = require('./mineSweeper').markSquare;
+const checkWin = require('./mineSweeper').checkWin;
 
 describe('US 1 - Game board', () => {
   it('should have 9 squares', () => {
@@ -308,5 +309,15 @@ describe('US 7 - Mark square as bomb', () => {
         ['3', '*', ' '],
       ].toString(),
     );
+  });
+});
+describe('US 8 - Check win', () => {
+  it('on board \n---\n--1\n---\n with 3 hidden bombs should result no win', () => {
+    let gameBoard = [
+      [' ', ' ', ' '],
+      [' ', ' ', '1'],
+      [' ', ' ', ' '],
+    ];
+    expect(checkWin(gameBoard, 3)).toBe(false);
   });
 });
