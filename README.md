@@ -585,14 +585,14 @@ When the possible steps are calculated
 Then it should be 4 squares listed
 ```
 
-### ⚠ US 6
+### 🚧 US 6
 
 ```text
 As a Mine Sweeper player
 I want to see my steps on the board
 So that I can plan the next one
 
-⚠ UAT 6.1
+🚧 UAT 6.1
 Given an empty game board with bomb (b) here
 
 --b

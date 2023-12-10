@@ -48,8 +48,8 @@
   - ✅ UAT 5.2
   - ✅ UAT 5.3
   - ✅ refactor getPossibleSteps()
-- ⚠ US 6
-  - ⚠ UAT 6.1
+- 🚧 US 6
+  - 🚧 UAT 6.1
   - ⚠ UAT 6.2
   - ⚠ UAT 6.3
   - ⚠ UAT 6.4
