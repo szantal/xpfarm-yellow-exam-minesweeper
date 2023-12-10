@@ -70,11 +70,11 @@
 
 ### Pomodoro 6
 
-- 🚧 US 7
+- ✅ US 7
   - ✅ UAT 7.1
   - ✅ UAT 7.2
   - ✅ UAT 7.3
-  - ⚠ refactor
+  - ✅ refactor markSquare()
 - ⚠ US 8
   - ⚠ UAT 8.1
   - ⚠ UAT 8.2

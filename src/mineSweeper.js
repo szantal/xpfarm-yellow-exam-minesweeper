@@ -116,18 +116,19 @@ function makeStep(step, gameBoard, bombBoard) {
 }
 
 function markSquare(step, gameBoard) {
-  if (step.toString() == '2,1' && gameBoard.toString() == ' , , ,*,*, ,3, , ') {
-    gameBoard[2][1] = '*';
-    return ['*', '[Sandbox 3x3] Square flagged as bomb.'];
+  let row = step[0];
+  let col = step[1];
+  let nextStep = '';
+  let message = '';
+  if (gameBoard[row][col] == ' ') {
+    nextStep = '*';
+    message = '[Sandbox 3x3] Square flagged as bomb.';
+  } else if (gameBoard[row][col] == '*') {
+    nextStep = ' ';
+    message = '[Sandbox 3x3] Square unflagged.';
   }
-  if (step.toString() == '1,0' && gameBoard.toString() == '1, , ,*,3,2, ,1,_') {
-    gameBoard[1][0] = ' ';
-    return [' ', '[Sandbox 3x3] Square unflagged.'];
-  }
-  if (step.toString() == '2,0') {
-    gameBoard[2][0] = '*';
-    return ['*', '[Sandbox 3x3] Square flagged as bomb.'];
-  }
+  gameBoard[row][col] = nextStep;
+  return [nextStep, message];
 }
 
 module.exports.gameBoard = gameBoard;

@@ -688,7 +688,7 @@ _2-
 ```
 -->
 
-### 🚧 US 7
+### ✅ US 7
 
 ```text
 As a Mine Sweeper player
