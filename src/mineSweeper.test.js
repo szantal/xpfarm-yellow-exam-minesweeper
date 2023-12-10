@@ -336,4 +336,12 @@ describe('US 8 - Check win', () => {
     ];
     expect(checkWin(gameBoard, 3)).toBe(true);
   });
+  it('on board \n_1-\n_11\n___\n with 1 hidden bomb should result win', () => {
+    let gameBoard = [
+      ['_', '1', ' '],
+      ['_', '1', '1'],
+      ['_', '_', '_'],
+    ];
+    expect(checkWin(gameBoard, 1)).toBe(true);
+  });
 });
