@@ -97,27 +97,24 @@ function getPossibleSteps(gameBoard) {
 }
 
 function makeStep(step, gameBoard, bombBoard) {
-  if (step.toString() == '2,2' && bombBoard.toString() == '1,b,b,2,3,2,b,1,0') {
-    gameBoard[2][2] = '_';
-    return ['_', '[Sandbox 3x3] 0 bomb around your square.'];
+  let row = step[0];
+  let col = step[1];
+  let nextStep = '';
+  let message = '';
+  if (bombBoard[row][col] == 0) {
+    nextStep = '_';
+    message = '[Sandbox 3x3] 0 bomb around your square.';
+  } else if (bombBoard[row][col] == 'b') {
+    nextStep = 'X';
+    message = '[Sandbox 3x3] BOOM! - Game Over.';
+  } else {
+    nextStep = bombBoard[row][col].toString();
+    message = '[Sandbox 3x3] ' + nextStep + ' bombs around your square.';
   }
-  if (step.toString() == '2,1' && bombBoard.toString() == '1,b,2,2,3,b,b,2,1') {
-    gameBoard[2][1] = '2';
-    return ['2', '[Sandbox 3x3] 2 bombs around your square.'];
-  }
-  if (step.toString() == '1,1' && bombBoard.toString() == '1,1,1,1,b,1,1,1,1') {
-    gameBoard[1][1] = 'X';
-    return ['X', '[Sandbox 3x3] BOOM! - Game Over.'];
-  }
-  if (step.toString() == '2,0' && bombBoard.toString() == '2,2,1,b,b,2,3,b,2') {
-    gameBoard[2][0] = '3';
-    return ['3', '[Sandbox 3x3] 3 bombs around your square.'];
-  }
-  if (step.toString() == '1,2' && bombBoard.toString() == '0,1,b,0,1,1,0,0,0') {
-    gameBoard[1][2] = '1';
-    return ['1', '[Sandbox 3x3] 1 bombs around your square.'];
-  }
+  gameBoard[row][col] = nextStep;
+  return [nextStep, message];
 }
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;

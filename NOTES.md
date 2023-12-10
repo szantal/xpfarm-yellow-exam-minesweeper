@@ -63,4 +63,6 @@
   - ✅ UAT 6.3
   - ✅ UAT 6.4
   - ✅ UAT 6.5
-  - ⚠ refactor makeStep()
+  - ✅ refactor makeStep()
+  - ⚠ UAT 6.6
+  - ⚠ UAT 6.7
