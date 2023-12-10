@@ -551,3 +551,105 @@ b2b
 132
 01b
 ```
+
+### ⚠ US 5
+
+```text
+As a Mine Sweeper player
+I want to know my possible steps
+So that I can plan the next one
+
+⚠ UAT 5.1
+Given an empty game board
+When the possible steps are calculated
+Then it should be all 9 squares listed
+
+⚠ UAT 5.2
+Given a game board with steps
+
+1--
+23-
+--1
+
+When the possible steps are calculated
+Then it should be 5 squares listed
+
+⚠ UAT 5.3
+Given a game board with steps
+
+22-
+**2
+3*2
+
+When the possible steps are calculated
+Then it should be 4 squares listed
+```
+
+### ⚠ US 6
+
+```text
+As a Mine Sweeper player
+I want to see my steps on the board
+So that I can plan the next one
+
+⚠ UAT 6.1
+Given an empty game board with bomb (b) here
+
+--b
+---
+---
+
+When I step on square 2;1
+Then it should return 1
+And message '[Sandbox 3x3] 1 bombs around your square.'
+
+⚠ UAT 6.2
+Given an empty game board with bomb (b) here
+
+---
+bb-
+-b-
+
+When I step on square 0;0
+Then it should return 3
+And message '[Sandbox 3x3] 3 bombs around your square.'
+
+⚠ UAT 6.3
+Given an empty game board with bomb (b) here
+
+---
+-b-
+---
+
+When I step on square 1;1
+Then it should return X
+And message '[Sandbox 3x3] BOOM! – Game Over.'
+
+⚠ UAT 6.4
+Given a game board
+
+1--
+23-
+--1
+
+with bombs (b) here
+
+-b-
+--b
+b--
+
+When I step on square 1;0
+Then it should return 2
+And message '[Sandbox 3x3] 2 bombs around your square.'
+
+⚠ UAT 6.5
+Given an empty game board with bombs (b) here
+
+-bb
+---
+b--
+
+When I step on square 2;0
+Then it should return _
+And message '[Sandbox 3x3] 0 bomb around your square.'
+```
