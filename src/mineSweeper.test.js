@@ -114,4 +114,20 @@ describe('US 5 - Listing possible steps', () => {
       ].toString(),
     );
   });
+  it('should be the 5 free squares listed given game board \n1--\n23-\n--1', () => {
+    let gameBoard = [
+      ['1', ' ', ' '],
+      ['2', '3', ' '],
+      [' ', ' ', '1'],
+    ];
+    expect(getPossibleSteps(gameBoard).toString()).toBe(
+      [
+        [0, 1],
+        [0, 2],
+        [1, 2],
+        [2, 0],
+        [2, 1],
+      ].toString(),
+    );
+  });
 });

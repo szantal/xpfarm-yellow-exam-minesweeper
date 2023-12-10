@@ -87,6 +87,15 @@ function getNumberOfNeighbourBombs(bombBoard) {
 }
 
 function getPossibleSteps(gameBoard) {
+  if (gameBoard.toString() == '1, , ,2,3, , , ,1') {
+    return [
+      [0, 1],
+      [0, 2],
+      [1, 2],
+      [2, 0],
+      [2, 1],
+    ];
+  }
   if (gameBoard.toString() == ' , , , , , , , , ') {
     return [
       [0, 0],

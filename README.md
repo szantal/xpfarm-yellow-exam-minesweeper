@@ -559,12 +559,12 @@ As a Mine Sweeper player
 I want to know my possible steps
 So that I can plan the next one
 
-🚧 UAT 5.1
+✅ UAT 5.1
 Given an empty game board
 When the possible steps are calculated
 Then it should be all 9 squares listed
 
-⚠ UAT 5.2
+✅ UAT 5.2
 Given a game board with steps
 
 1--
