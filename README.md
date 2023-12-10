@@ -442,7 +442,7 @@ Given a game board
 When I count the number of squares
 Then it should be 9
 
-🚧 UAT 1.2
+✅ UAT 1.2
 Given the squares of the game board
 When I want to create one
 Then the empty game board looks like
