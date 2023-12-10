@@ -4,7 +4,7 @@ let gameBoard = [
   [' ', ' ', ' '],
 ];
 
-function showGameBoard() {
+function showGameBoard(message) {
   let line = '\n+-+-+-+\n|';
   return (
     line +
@@ -27,7 +27,8 @@ function showGameBoard() {
     gameBoard[2][1] +
     '|' +
     gameBoard[2][2] +
-    '|\n+-+-+-+\n[Sandbox 3x3] Game created'
+    '|\n+-+-+-+\n' +
+    message
   );
 }
 
@@ -136,6 +137,28 @@ function checkWin(gameBoard, numberOfBombs) {
   return freeSquares == numberOfBombs;
 }
 
+function playGame() {
+  console.log(showGameBoard('[Sandbox 3x3] Game created'));
+  let bombBoard = placeBomb(numberOfBombs);
+  getNumberOfNeighbourBombs(bombBoard);
+  let isGameOn = true;
+  while (isGameOn) {
+    let possibleSteps = getPossibleSteps(gameBoard);
+    let step = possibleSteps[Math.floor(Math.random() * possibleSteps.length)];
+    makeStep(step, gameBoard, bombBoard);
+    let message = makeStep(step, gameBoard, bombBoard)[1];
+    if (makeStep(step, gameBoard, bombBoard)[0] == 'X') {
+      console.log(showGameBoard(message));
+      return 'Game Over';
+    }
+    if (checkWin(gameBoard, numberOfBombs)) {
+      console.log(showGameBoard('[Sandbox 3x3] the land is cleared! GOOD JOB!'));
+      return 'Game Victory';
+    }
+    console.log(showGameBoard(message));
+  }
+}
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
@@ -145,3 +168,4 @@ module.exports.getPossibleSteps = getPossibleSteps;
 module.exports.makeStep = makeStep;
 module.exports.markSquare = markSquare;
 module.exports.checkWin = checkWin;
+module.exports.playGame = playGame;

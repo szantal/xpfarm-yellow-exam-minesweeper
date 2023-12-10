@@ -790,14 +790,14 @@ When winning is checked
 Then game has not won
 ```
 
-### 🚧 US 9
+### ✅ US 9
 
 ```text
 As a Mine Sweeper player
 I want to see a BOT game
 So that I can learn new tricks
 
-🚧 UAT 9.1
+✅ UAT 9.1
 Given a BOT game runs
 When it ends
 Then the BOT either loses or wins, other outcome is not possible

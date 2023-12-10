@@ -90,5 +90,5 @@
   - ✅ UAT 8.4
   - ✅ UAT 8.5
   - ✅ refactor checkWin()
-- 🚧 US 9
-  - 🚧 UAT 9.1
+- ✅ US 9
+  - ✅ UAT 9.1 & refactor showGameBoard()
