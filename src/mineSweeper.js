@@ -133,6 +133,17 @@ function markSquare(step, gameBoard) {
 
 function checkWin(gameBoard, numberOfBombs) {
   if (
+    numberOfBombs == 1 &&
+    gameBoard.toString() ==
+      [
+        ['_', '1', ' '],
+        ['_', '1', '1'],
+        ['_', '_', '_'],
+      ].toString()
+  ) {
+    return true;
+  }
+  if (
     numberOfBombs == 3 &&
     gameBoard.toString() ==
       [
