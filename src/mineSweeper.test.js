@@ -130,4 +130,19 @@ describe('US 5 - Listing possible steps', () => {
       ].toString(),
     );
   });
+  it('should be the 4 free squares listed given game board \n22-\n**2\n3*2', () => {
+    let gameBoard = [
+      ['2', '2', ' '],
+      ['*', '*', '2'],
+      ['3', '*', '2'],
+    ];
+    expect(getPossibleSteps(gameBoard).toString()).toBe(
+      [
+        [0, 2],
+        [1, 0],
+        [1, 1],
+        [2, 1],
+      ].toString(),
+    );
+  });
 });
