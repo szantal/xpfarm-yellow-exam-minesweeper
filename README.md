@@ -430,7 +430,7 @@ Game:
 
 ## Backlog
 
-### 🚧 US 1
+### ✅ US 1
 
 ```text
 As a Mine Sweeper player

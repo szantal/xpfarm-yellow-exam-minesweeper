@@ -17,10 +17,10 @@
 ### Pomodoro 2
 
 - ✅ rename files
-- 🚧 US 1
+- ✅ US 1
   - ✅ UAT 1.1
   - ✅ UAT 1.2
-  - ⚠ refactor showGameBoard()
+  - ✅ refactor showGameBoard()
 - ⚠ US 2
   - ⚠ UAT 2.1
 - ⚠ US 3
