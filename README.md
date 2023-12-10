@@ -642,7 +642,7 @@ When I step on square 1;0
 Then it should return 2
 And message '[Sandbox 3x3] 2 bombs around your square.'
 
-🚧 UAT 6.5
+✅ UAT 6.5
 Given an empty game board with bombs (b) here
 
 -bb
@@ -652,4 +652,36 @@ b--
 When I step on square 2;0
 Then it should return _
 And message '[Sandbox 3x3] 0 bomb around your square.'
+
+⚠ UAT 6.6
+Given an empty game board with bomb (b) here
+
+--b
+---
+---
+
+When I step on square 0;0
+Then it should return _
+And message '[Sandbox 3x3] 0 bomb around your square.'
+
+Board state:
+_1-
+_11
+___
+
+⚠ UAT 6.7
+Given an empty game board with bombs (b) here
+
+--b
+--b
+--b
+
+When I step on square 0;2
+Then it should return _
+And message '[Sandbox 3x3] 0 bomb around your square.'
+
+Board state:
+_2-
+_3-
+_2-
 ```

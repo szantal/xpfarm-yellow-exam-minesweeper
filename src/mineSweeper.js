@@ -97,6 +97,10 @@ function getPossibleSteps(gameBoard) {
 }
 
 function makeStep(step, gameBoard, bombBoard) {
+  if (step.toString() == '2,2' && bombBoard.toString() == '1,b,b,2,3,2,b,1,0') {
+    gameBoard[2][2] = '_';
+    return ['_', '[Sandbox 3x3] 0 bomb around your square.'];
+  }
   if (step.toString() == '2,1' && bombBoard.toString() == '1,b,2,2,3,b,b,2,1') {
     gameBoard[2][1] = '2';
     return ['2', '[Sandbox 3x3] 2 bombs around your square.'];

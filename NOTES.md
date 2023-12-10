@@ -62,4 +62,5 @@
   - ✅ UAT 6.2
   - ✅ UAT 6.3
   - ✅ UAT 6.4
-  - 🚧 UAT 6.5
+  - ✅ UAT 6.5
+  - ⚠ refactor makeStep()
