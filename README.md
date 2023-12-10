@@ -700,7 +700,7 @@ Given an empty game board
 When I mark square 0;0 as bomb
 Then * appears in the square
 
-⚠ UAT 7.2
+🚧 UAT 7.2
 Given game board with * in square 0;1
 
 1--

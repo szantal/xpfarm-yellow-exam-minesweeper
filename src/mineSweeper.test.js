@@ -277,4 +277,20 @@ describe('US 7 - Mark square as bomb', () => {
       ].toString(),
     );
   });
+  it('on board \n1--\n*32\n-1_\n on square 0;1 should return " " and message: [Sandbox 3x3] Square unflagged.', () => {
+    let step = [1, 0];
+    let gameBoard = [
+      ['1', ' ', ' '],
+      ['*', '3', '2'],
+      [' ', '1', '_'],
+    ];
+    expect(markSquare(step, gameBoard)).toStrictEqual([' ', '[Sandbox 3x3] Square unflagged.']);
+    expect(gameBoard.toString()).toBe(
+      [
+        ['1', ' ', ' '],
+        [' ', '3', '2'],
+        [' ', '1', '_'],
+      ].toString(),
+    );
+  });
 });
