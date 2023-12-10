@@ -66,4 +66,18 @@
   - ✅ refactor makeStep()
   - ⚠ UAT 6.6 - not done
   - ⚠ UAT 6.7 - not done
-- ✅ planning
+- ✅ write user stories
+
+### Pomodoro 6
+
+- ⚠ US 7
+  - ⚠ UAT 7.1
+  - ⚠ UAT 7.2
+- ⚠ US 8
+  - ⚠ UAT 8.1
+  - ⚠ UAT 8.2
+  - ⚠ UAT 8.3
+  - ⚠ UAT 8.4
+  - ⚠ UAT 8.5
+- ⚠ US 9
+  - ⚠ UAT 9.1
