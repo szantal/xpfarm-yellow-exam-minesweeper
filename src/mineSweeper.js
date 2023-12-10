@@ -33,15 +33,21 @@ function showGameBoard() {
 
 let numberOfBombs = [1, 3][Math.round(Math.random())];
 
-function placeBomb() {
+function placeBomb(numberOfBombs) {
   let bombBoard = [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
   ];
-  let row = Math.floor(Math.random() * 3);
-  let col = Math.floor(Math.random() * 3);
-  bombBoard[row].splice(col, 1, 'b');
+  let placedBombs = 0;
+  while (placedBombs < numberOfBombs) {
+    let row = Math.floor(Math.random() * 3);
+    let col = Math.floor(Math.random() * 3);
+    if (bombBoard[row][col] != 'b') {
+      bombBoard[row].splice(col, 1, 'b');
+      placedBombs++;
+    }
+  }
   return bombBoard;
 }
 

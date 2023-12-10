@@ -470,7 +470,7 @@ When the game starts
 Then the number of bombs should be 1 or 3.
 ```
 
-### 🚧 US 3
+### ✅ US 3
 
 ```text
 As a Mine Sweeper player
@@ -482,7 +482,7 @@ Given a new game
 When there is 1 bomb
 Then the number of bombs placed on the game board should be 1.
 
-🚧 UAT 3.2
+✅ UAT 3.2
 Given a new game
 When there are 3 bombs
 Then the number of bombs placed on the game board should be 3.
