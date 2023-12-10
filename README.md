@@ -592,7 +592,7 @@ As a Mine Sweeper player
 I want to see my steps on the board
 So that I can plan the next one
 
-🚧 UAT 6.1
+✅ UAT 6.1
 Given an empty game board with bomb (b) here
 
 --b

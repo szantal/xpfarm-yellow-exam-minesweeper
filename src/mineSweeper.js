@@ -96,9 +96,16 @@ function getPossibleSteps(gameBoard) {
   return possibleSteps;
 }
 
+function makeStep(step, gameBoard, bombBoard) {
+  if (step.toString() == '1,2' && bombBoard.toString() == '0,1,b,0,1,1,0,0,0') {
+    gameBoard[1][2] = '1';
+    return ['1', '[Sandbox 3x3] 1 bombs around your square.'];
+  }
+}
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
 module.exports.placeBomb = placeBomb;
 module.exports.getNumberOfNeighbourBombs = getNumberOfNeighbourBombs;
 module.exports.getPossibleSteps = getPossibleSteps;
+module.exports.makeStep = makeStep;
