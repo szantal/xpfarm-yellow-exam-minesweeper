@@ -31,5 +31,8 @@ function showGameBoard() {
   );
 }
 
+let numberOfBombs = [1, 3][Math.round(Math.random())];
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
+module.exports.numberOfBombs = numberOfBombs;

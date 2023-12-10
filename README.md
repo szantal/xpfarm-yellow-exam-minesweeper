@@ -457,14 +457,14 @@ Then the empty game board looks like
 [Sandbox 3x3] Game created
 ```
 
-### 🚧 US 2
+### ✅ US 2
 
 ```text
 As a Mine Sweeper player
 I want to have bomb(s)
 So that I can sweep them
 
-🚧 UAT 2.1
+✅ UAT 2.1
 Given a new game
 When the game starts
 Then the number of bombs should be 1 or 3.
