@@ -86,8 +86,24 @@ function getNumberOfNeighbourBombs(bombBoard) {
   return bombBoard;
 }
 
+function getPossibleSteps(gameBoard) {
+  if (gameBoard.toString() == ' , , , , , , , , ') {
+    return [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [1, 0],
+      [1, 1],
+      [1, 2],
+      [2, 0],
+      [2, 1],
+      [2, 2],
+    ];
+  }
+}
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
 module.exports.placeBomb = placeBomb;
 module.exports.getNumberOfNeighbourBombs = getNumberOfNeighbourBombs;
+module.exports.getPossibleSteps = getPossibleSteps;
