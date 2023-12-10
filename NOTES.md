@@ -77,7 +77,7 @@
   - ✅ refactor markSquare()
 - 🚧 US 8
   - ✅ UAT 8.1
-  - 🚧 UAT 8.2
+  - ✅ UAT 8.2
   - ⚠ UAT 8.3
   - ⚠ UAT 8.4
   - ⚠ UAT 8.5
