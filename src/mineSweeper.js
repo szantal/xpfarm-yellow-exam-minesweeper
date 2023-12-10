@@ -1,5 +1,7 @@
-function mineSweeper() {
-  return 'hello';
-}
+let gameBoard = [
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+  [' ', ' ', ' '],
+];
 
-module.exports = mineSweeper;
+module.exports.gameBoard = gameBoard;

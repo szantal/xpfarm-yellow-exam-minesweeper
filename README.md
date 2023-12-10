@@ -437,7 +437,7 @@ As a Mine Sweeper player
 I want to have a game board
 So that I can follow my steps
 
-🚧 UAT 1.1
+✅ UAT 1.1
 Given a game board
 When I count the number of squares
 Then it should be 9
