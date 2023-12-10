@@ -537,7 +537,7 @@ Then the bomb board is
 1b1
 111
 
-🚧 UAT 4.4
+✅ UAT 4.4
 Given a board with bombs (b) here
 
 b-b

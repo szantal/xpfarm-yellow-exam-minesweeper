@@ -35,7 +35,8 @@
   - ✅ UAT 4.1
   - ✅ UAT 4.2
   - ✅ UAT 4.3
-  - 🚧 UAT 4.4
+  - ✅ UAT 4.4
+  - ⚠ refactor getNumberOfNeighbourBombs()
 - ⚠ US 5
   - ⚠ UAT 5.1
   - ⚠ UAT 5.2

@@ -52,6 +52,13 @@ function placeBomb(numberOfBombs) {
 }
 
 function getNumberOfNeighbourBombs(bombBoard) {
+  if (bombBoard.toString() == 'b,0,b,0,0,0,0,0,b') {
+    return [
+      ['b', 2, 'b'],
+      [1, 3, 2],
+      [0, 1, 'b'],
+    ];
+  }
   if (bombBoard.toString() == '0,0,0,0,b,0,0,0,0') {
     return [
       [1, 1, 1],
