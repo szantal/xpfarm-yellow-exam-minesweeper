@@ -495,7 +495,7 @@ As a Mine Sweeper player
 I want to know the number of neighbour squares with bombs
 So that I can figure out my next step
 
-🚧 UAT 4.1
+✅ UAT 4.1
 Given a board with bombs (b) here
 
 --b

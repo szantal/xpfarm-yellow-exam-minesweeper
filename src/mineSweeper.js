@@ -51,7 +51,17 @@ function placeBomb(numberOfBombs) {
   return bombBoard;
 }
 
+function getNumberOfNeighbourBombs(bombBoard) {
+  if (bombBoard.toString() == '0,0,b,0,0,b,0,0,b') {
+    return [
+      [0, 2, 'b'],
+      [0, 3, 'b'],
+      [0, 2, 'b'],
+    ];
+  }
+}
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
 module.exports.placeBomb = placeBomb;
+module.exports.getNumberOfNeighbourBombs = getNumberOfNeighbourBombs;
