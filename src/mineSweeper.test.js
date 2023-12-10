@@ -293,4 +293,20 @@ describe('US 7 - Mark square as bomb', () => {
       ].toString(),
     );
   });
+  it('on board \n---\n**-\n3--\n on square 1;0 should return * and message: [Sandbox 3x3] Square flagged as bomb.', () => {
+    let step = [2, 1];
+    let gameBoard = [
+      [' ', ' ', ' '],
+      ['*', '*', ' '],
+      ['3', ' ', ' '],
+    ];
+    expect(markSquare(step, gameBoard)).toStrictEqual(['*', '[Sandbox 3x3] Square flagged as bomb.']);
+    expect(gameBoard.toString()).toBe(
+      [
+        [' ', ' ', ' '],
+        ['*', '*', ' '],
+        ['3', '*', ' '],
+      ].toString(),
+    );
+  });
 });

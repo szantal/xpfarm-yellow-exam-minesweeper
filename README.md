@@ -714,7 +714,7 @@ Then the board's state is
 -32
 -1_
 
-⚠ UAT 7.3
+🚧 UAT 7.3
 Given game board
 
 ---
