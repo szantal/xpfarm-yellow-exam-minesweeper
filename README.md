@@ -642,7 +642,7 @@ When I step on square 1;0
 Then it should return 2
 And message '[Sandbox 3x3] 2 bombs around your square.'
 
-⚠ UAT 6.5
+🚧 UAT 6.5
 Given an empty game board with bombs (b) here
 
 -bb
