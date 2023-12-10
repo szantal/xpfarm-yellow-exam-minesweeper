@@ -11,5 +11,5 @@
 ### Pomodoro 1
 
 - ✅ collect examples
-- ⚠ write user stories
+- ✅ write user stories
 - ⚠ rename files

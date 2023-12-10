@@ -429,3 +429,125 @@ Game:
 - ✅ DONE
 
 ## Backlog
+
+### ⚠ US 1
+
+```text
+As a Mine Sweeper player
+I want to have a game board
+So that I can follow my steps
+
+⚠ UAT 1.1
+Given a game board
+When I count the number of squares
+Then it should be 9
+
+⚠ UAT 1.2
+Given the squares of the game board
+When I want to create one
+Then the empty game board looks like
+
++-+-+-+
+| | | |
++-+-+-+
+| | | |
++-+-+-+
+| | | |
++-+-+-+
+[Sandbox 3x3] Game created
+```
+
+### ⚠ US 2
+
+```text
+As a Mine Sweeper player
+I want to have bomb(s)
+So that I can sweep them
+
+⚠ UAT 2.1
+Given a new game
+When the game starts
+Then the number of bombs should be 1 or 3.
+```
+
+### ⚠ US 3
+
+```text
+As a Mine Sweeper player
+I want to have the game board filled with bomb(s)
+So that I can sweep them
+
+⚠ UAT 3.1
+Given a new game
+When there is 1 bomb
+Then the number of bombs placed on the game board should be 1.
+
+⚠ UAT 3.2
+Given a new game
+When there are 3 bombs
+Then the number of bombs placed on the game board should be 3.
+```
+
+### ⚠ US 4
+
+```text
+As a Mine Sweeper player
+I want to know the number of neighbour squares with bombs
+So that I can figure out my next step
+
+⚠ UAT 4.1
+Given a board with bombs (b) here
+
+--b
+--b
+--b
+
+When the number of neighbour squares with bombs is calculated
+Then the bomb board is
+
+02b
+03b
+02b
+
+⚠ UAT 4.2
+Given a board with bombs (b) here
+
+--b
+---
+---
+
+When the number of neighbour squares with bombs is calculated
+Then the bomb board is
+
+01b
+011
+000
+
+⚠ UAT 4.3
+Given a board with bombs (b) here
+
+---
+-b-
+---
+
+When the number of neighbour squares with bombs is calculated
+Then the bomb board is
+
+111
+1b1
+111
+
+⚠ UAT 4.4
+Given a board with bombs (b) here
+
+b-b
+---
+--b
+
+When the number of neighbour squares with bombs is calculated
+Then the bomb board is
+
+b2b
+132
+01b
+```
