@@ -12,4 +12,16 @@
 
 - ✅ collect examples
 - ✅ write user stories
-- ⚠ rename files
+- 🚧 rename files
+
+### Pomodoro 2
+
+- ✅ rename files
+- ⚠ US 1
+  - ⚠ UAT 1.1
+  - ⚠ UAT 1.2
+- ⚠ US 2
+  - ⚠ UAT 2.1
+- ⚠ US 3
+  - ⚠ UAT 3.1
+  - ⚠ UAT 3.2
