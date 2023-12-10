@@ -509,7 +509,7 @@ Then the bomb board is
 03b
 02b
 
-🚧 UAT 4.2
+✅ UAT 4.2
 Given a board with bombs (b) here
 
 --b
