@@ -652,8 +652,9 @@ b--
 When I step on square 2;0
 Then it should return _
 And message '[Sandbox 3x3] 0 bomb around your square.'
+```
 
-⚠ UAT 6.6
+<!--⚠ UAT 6.6
 Given an empty game board with bomb (b) here
 
 --b
@@ -684,4 +685,120 @@ Board state:
 _2-
 _3-
 _2-
+```
+-->
+
+### ⚠ US 7
+
+```text
+As a Mine Sweeper player
+I want to mark squares
+So that I can see my guessed bombs
+
+⚠ UAT 7.1
+Given an empty game board
+When I mark square 0;0 as bomb
+Then * appears in the square
+
+⚠ UAT 7.2
+Given game board with * in square 0;1
+
+1--
+*32
+-1_
+
+When I unmark it
+Then the board's state is
+
+1--
+-32
+-1_
+
+⚠ UAT 7.2
+Given game board
+
+---
+**-
+3--
+
+When I mark 1;0 as bomb
+Then it should return *
+And message '[Sandbox 3x3] Square flagged as bomb.'
+
+```
+
+### ⚠ US 8
+
+```text
+As a Mine Sweeper player
+I want to know if I won
+So that I can celebrate
+
+⚠ UAT 8.1
+Given game board
+
+---
+--1
+---
+
+And 3 bombs hidden
+When winning is checked
+Then game has not won
+
+⚠ UAT 8.2
+Given game board
+
+*2*
+132
+---
+
+And 3 bombs hidden
+When winning is checked
+Then game has not won
+
+⚠ UAT 8.3
+Given game board
+
+221
+**2
+3*2
+
+And 3 bombs hidden
+When winning is checked
+Then game has won
+
+⚠ UAT 8.4
+Given game board
+
+_1-
+_11
+___
+
+And 1 bomb hidden
+When winning is checked
+Then game has won
+
+⚠ UAT 8.5
+Given game board
+
+1--
+*32
+-1_
+
+And 3 bombs hidden
+When winning is checked
+Then game has not won
+```
+
+### ⚠ US 9
+
+```text
+As a Mine Sweeper player
+I want to see a BOT game
+So that I can learn new tricks
+
+⚠ UAT 9.1
+Given a BOT game runs
+When it ends
+Then the BOT either loses or wins, other outcome is not possible
 ```

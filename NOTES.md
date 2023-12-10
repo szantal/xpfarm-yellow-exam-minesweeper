@@ -64,5 +64,6 @@
   - ✅ UAT 6.4
   - ✅ UAT 6.5
   - ✅ refactor makeStep()
-  - ⚠ UAT 6.6
-  - ⚠ UAT 6.7
+  - ⚠ UAT 6.6 - not done
+  - ⚠ UAT 6.7 - not done
+- ✅ planning
