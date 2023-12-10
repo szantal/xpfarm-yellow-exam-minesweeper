@@ -214,4 +214,26 @@ describe('US 6 - Making step', () => {
       ].toString(),
     );
   });
+  it('on board \n1--\n23-\n--1 to square 1;0 should return 1 to board and message: [Sandbox 3x3] 2 bombs around your square.', () => {
+    let step = [2, 1];
+    let gameBoard = [
+      ['1', ' ', ' '],
+      ['2', '3', ' '],
+      [' ', ' ', '1'],
+    ];
+    let bombBoard = [
+      [1, 'b', 2],
+      [2, 3, 'b'],
+      ['b', 2, 1],
+    ];
+    expect(makeStep(step, gameBoard, bombBoard)[0]).toBe('2');
+    expect(makeStep(step, gameBoard, bombBoard)[1]).toBe('[Sandbox 3x3] 2 bombs around your square.');
+    expect(gameBoard.toString()).toBe(
+      [
+        ['1', ' ', ' '],
+        ['2', '3', ' '],
+        [' ', '2', '1'],
+      ].toString(),
+    );
+  });
 });
