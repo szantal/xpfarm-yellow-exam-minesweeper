@@ -41,3 +41,12 @@
   - ⚠ UAT 5.1
   - ⚠ UAT 5.2
   - ⚠ UAT 5.3
+
+### Pomodoro 4
+
+- ✅ US 4
+  - ✅ refactor getNumberOfNeighbourBombs()
+- ⚠ US 5
+  - ⚠ UAT 5.1
+  - ⚠ UAT 5.2
+  - ⚠ UAT 5.3

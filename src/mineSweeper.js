@@ -51,36 +51,41 @@ function placeBomb(numberOfBombs) {
   return bombBoard;
 }
 
-function getNumberOfNeighbourBombs(bombBoard) {
-  if (bombBoard.toString() == 'b,0,b,0,0,0,0,0,b') {
-    return [
-      ['b', 2, 'b'],
-      [1, 3, 2],
-      [0, 1, 'b'],
-    ];
-  }
-  if (bombBoard.toString() == '0,0,0,0,b,0,0,0,0') {
-    return [
-      [1, 1, 1],
-      [1, 'b', 1],
-      [1, 1, 1],
-    ];
-  }
-  if (bombBoard.toString() == '0,0,b,0,0,0,0,0,0') {
-    return [
-      [0, 1, 'b'],
-      [0, 1, 1],
-      [0, 0, 0],
-    ];
-  }
-  if (bombBoard.toString() == '0,0,b,0,0,b,0,0,b') {
-    return [
-      [0, 2, 'b'],
-      [0, 3, 'b'],
-      [0, 2, 'b'],
-    ];
-  }
+function getNeighbourSquares(step) {
+  let positions = [
+    [1, 1],
+    [1, 0],
+    [1, -1],
+    [0, -1],
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
+    [0, 1],
+  ];
+  let neighbourSquares = [];
+  positions.forEach((position) => {
+    let newRow = step[0] + position[0];
+    let newCol = step[1] + position[1];
+    if (newRow >= 0 && newCol >= 0 && newRow <= 2 && newCol <= 2) {
+      neighbourSquares.push([newRow, newCol]);
+    }
+  });
+  return neighbourSquares;
 }
+function getNumberOfNeighbourBombs(bombBoard) {
+  for (let bombRow = 0; bombRow < bombBoard.length; bombRow++) {
+    for (let bombCol = 0; bombCol < bombBoard[bombRow].length; bombCol++) {
+      if (bombBoard[bombRow][bombCol] == 'b') {
+        let position = getNeighbourSquares([bombRow, bombCol]);
+        for (let neighbourRow = 0; neighbourRow < position.length; neighbourRow++) {
+          if (bombBoard[position[neighbourRow][0]][position[neighbourRow][1]] != 'b') bombBoard[position[neighbourRow][0]][position[neighbourRow][1]] += 1;
+        }
+      }
+    }
+  }
+  return bombBoard;
+}
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;

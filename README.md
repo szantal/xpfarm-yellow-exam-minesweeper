@@ -488,7 +488,7 @@ When there are 3 bombs
 Then the number of bombs placed on the game board should be 3.
 ```
 
-### 🚧 US 4
+### ✅ US 4
 
 ```text
 As a Mine Sweeper player
