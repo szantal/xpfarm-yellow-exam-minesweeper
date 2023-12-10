@@ -1,7 +1,7 @@
-const mineSweeper = require('./mineSweeper');
+const gameBoard = require('./mineSweeper').gameBoard;
 
-describe('hello', () => {
-  it('should return hello', () => {
-    expect(mineSweeper()).toBe('hello');
+describe('US 1 - Game board', () => {
+  it('should have 9 squares', () => {
+    expect(gameBoard.flat().length).toBe(9);
   });
 });
