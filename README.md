@@ -488,14 +488,14 @@ When there are 3 bombs
 Then the number of bombs placed on the game board should be 3.
 ```
 
-### ⚠ US 4
+### 🚧 US 4
 
 ```text
 As a Mine Sweeper player
 I want to know the number of neighbour squares with bombs
 So that I can figure out my next step
 
-⚠ UAT 4.1
+🚧 UAT 4.1
 Given a board with bombs (b) here
 
 --b

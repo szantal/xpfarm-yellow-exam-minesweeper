@@ -2,6 +2,7 @@ const gameBoard = require('./mineSweeper').gameBoard;
 const showGameBoard = require('./mineSweeper').showGameBoard;
 const numberOfBombs = require('./mineSweeper').numberOfBombs;
 const placeBomb = require('./mineSweeper').placeBomb;
+const getNumberOfNeighbourBombs = require('./mineSweeper').getNumberOfNeighbourBombs;
 
 describe('US 1 - Game board', () => {
   it('should have 9 squares', () => {
@@ -30,5 +31,22 @@ describe('US 3 - Number of bombs placed on the game board', () => {
         .flat()
         .filter((c) => c === 'b').length,
     ).toBe(3);
+  });
+});
+
+describe('US 4 - Board with the number of neighbour squares with bombs', () => {
+  it('should be \n02b\n03b\n02b\n when bombs are placed here: \n--b\n--b\n--b', () => {
+    let bombBoard = [
+      [0, 0, 'b'],
+      [0, 0, 'b'],
+      [0, 0, 'b'],
+    ];
+    expect(getNumberOfNeighbourBombs(bombBoard).toString()).toBe(
+      [
+        [0, 2, 'b'],
+        [0, 3, 'b'],
+        [0, 2, 'b'],
+      ].toString(),
+    );
   });
 });
