@@ -132,61 +132,8 @@ function markSquare(step, gameBoard) {
 }
 
 function checkWin(gameBoard, numberOfBombs) {
-  if (
-    numberOfBombs == 3 &&
-    gameBoard.toString() ==
-      [
-        ['1', ' ', ' '],
-        ['*', '3', '2'],
-        [' ', '1', '_'],
-      ].toString()
-  ) {
-    return false;
-  }
-  if (
-    numberOfBombs == 1 &&
-    gameBoard.toString() ==
-      [
-        ['_', '1', ' '],
-        ['_', '1', '1'],
-        ['_', '_', '_'],
-      ].toString()
-  ) {
-    return true;
-  }
-  if (
-    numberOfBombs == 3 &&
-    gameBoard.toString() ==
-      [
-        ['2', '2', '1'],
-        ['*', '*', '2'],
-        ['3', '*', '2'],
-      ].toString()
-  ) {
-    return true;
-  }
-  if (
-    numberOfBombs == 3 &&
-    gameBoard.toString() ==
-      [
-        ['*', '2', '*'],
-        ['1', '3', '2'],
-        [' ', ' ', ' '],
-      ].toString()
-  ) {
-    return false;
-  }
-  if (
-    numberOfBombs == 3 &&
-    gameBoard.toString() ==
-      [
-        [' ', ' ', ' '],
-        [' ', ' ', '1'],
-        [' ', ' ', ' '],
-      ].toString()
-  ) {
-    return false;
-  }
+  let freeSquares = gameBoard.flat().filter((c) => c == ' ' || c == '*').length;
+  return freeSquares == numberOfBombs;
 }
 
 module.exports.gameBoard = gameBoard;

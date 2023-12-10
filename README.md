@@ -727,7 +727,7 @@ And message '[Sandbox 3x3] Square flagged as bomb.'
 
 ```
 
-### 🚧 US 8
+### ✅ US 8
 
 ```text
 As a Mine Sweeper player
