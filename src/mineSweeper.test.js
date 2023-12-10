@@ -5,6 +5,7 @@ const placeBomb = require('./mineSweeper').placeBomb;
 const getNumberOfNeighbourBombs = require('./mineSweeper').getNumberOfNeighbourBombs;
 const getPossibleSteps = require('./mineSweeper').getPossibleSteps;
 const makeStep = require('./mineSweeper').makeStep;
+const markSquare = require('./mineSweeper').markSquare;
 
 describe('US 1 - Game board', () => {
   it('should have 9 squares', () => {
@@ -255,6 +256,24 @@ describe('US 6 - Making step', () => {
         [' ', ' ', ' '],
         [' ', ' ', ' '],
         [' ', ' ', '_'],
+      ].toString(),
+    );
+  });
+});
+describe('US 7 - Mark square as bomb', () => {
+  it('on empty board on square 0;0 should return * and message: [Sandbox 3x3] Square flagged as bomb.', () => {
+    let step = [2, 0];
+    let gameBoard = [
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+      [' ', ' ', ' '],
+    ];
+    expect(markSquare(step, gameBoard)).toStrictEqual(['*', '[Sandbox 3x3] Square flagged as bomb.']);
+    expect(gameBoard.toString()).toBe(
+      [
+        [' ', ' ', ' '],
+        [' ', ' ', ' '],
+        ['*', ' ', ' '],
       ].toString(),
     );
   });
