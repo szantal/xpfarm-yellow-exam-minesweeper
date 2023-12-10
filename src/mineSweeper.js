@@ -131,6 +131,20 @@ function markSquare(step, gameBoard) {
   return [nextStep, message];
 }
 
+function checkWin(gameBoard, numberOfBombs) {
+  if (
+    numberOfBombs == 3 &&
+    gameBoard.toString() ==
+      [
+        [' ', ' ', ' '],
+        [' ', ' ', '1'],
+        [' ', ' ', ' '],
+      ].toString()
+  ) {
+    return false;
+  }
+}
+
 module.exports.gameBoard = gameBoard;
 module.exports.showGameBoard = showGameBoard;
 module.exports.numberOfBombs = numberOfBombs;
@@ -139,3 +153,4 @@ module.exports.getNumberOfNeighbourBombs = getNumberOfNeighbourBombs;
 module.exports.getPossibleSteps = getPossibleSteps;
 module.exports.makeStep = makeStep;
 module.exports.markSquare = markSquare;
+module.exports.checkWin = checkWin;

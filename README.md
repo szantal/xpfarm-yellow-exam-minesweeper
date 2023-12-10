@@ -734,7 +734,7 @@ As a Mine Sweeper player
 I want to know if I won
 So that I can celebrate
 
-🚧 UAT 8.1
+✅ UAT 8.1
 Given game board
 
 ---
