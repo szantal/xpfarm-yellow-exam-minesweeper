@@ -24,4 +24,11 @@ describe('US 3 - Number of bombs placed on the game board', () => {
         .filter((c) => c === 'b').length,
     ).toBe(1);
   });
+  it('should be 3 when there are 3 bombs', () => {
+    expect(
+      placeBomb(3)
+        .flat()
+        .filter((c) => c === 'b').length,
+    ).toBe(3);
+  });
 });
